@@ -18,7 +18,8 @@
   },
   "homepage": "https://github.com/AMGA1198/beginning-with-jenkins#readme",
   "dependencies": {
-    "express": "^4.17.1"
+    "express": "^4.17.1",
+    "lint": "^0.7.0"
   },
   "devDependencies": {
     "mocha": "^8.1.3",

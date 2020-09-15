@@ -1,15 +1,26 @@
 pipeline {
     agent any
-
+parameters{
+     choice(name:'BRANCH_NAME',
+      choices:'master\ndevelopment\nstaging',
+      description:'choose the branch to build and deploy')
+   }
     stages {
-        stage('Build') {
+        stage('Installing dependecies') {
             steps {
-                echo 'Building..'
+                echo 'Installing dependecies..'
+                sh'npm install'
             }
         }
         stage('Test') {
             steps {
                 echo 'Testing..'
+            }
+        }
+        stage('Deploying') {
+            steps {
+                echo 'Deploying..'
+                npm start
             }
         }
     }
