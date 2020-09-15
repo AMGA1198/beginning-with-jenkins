@@ -15,6 +15,7 @@ parameters{
         stage('Test') {
             steps {
                 echo 'Testing..'
+                echo 'npm lint'
             }
         }
         stage('Deploying') {
