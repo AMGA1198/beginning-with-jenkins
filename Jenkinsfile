@@ -20,7 +20,8 @@ parameters{
         stage('Deploying') {
             steps {
                 echo 'Deploying..'
-                npm start
+                sh 'npm start'
+                echo 'deployed'
             }
         }
     }
