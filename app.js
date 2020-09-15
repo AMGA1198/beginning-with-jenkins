@@ -6,3 +6,4 @@ app.get('/',function(req,res) {
 });
 
 app.listen(4000);
+// init on port 4000
